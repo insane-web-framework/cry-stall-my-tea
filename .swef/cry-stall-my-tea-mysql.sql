@@ -10,13 +10,27 @@ BEGIN
         ,`quote_Quotation` AS `quotation`
         ,`quote_Author` AS `author`
         ,`quote_Dated` AS `dated`
-        ,RAND() AS `priority`
   FROM `crystallmytea_quote`
-  WHERE `priority`<(10/(SELECT COUNT(`quote_UUID`) AS `count`FROM `crystallmytea_quote`))
+  ORDER BY RAND()
   LIMIT 0,1;
 END$$
 
 DELIMITER ;
+
+
+
+-- CRY-STALL-MY-TEA ENDPOINT --
+
+INSERT IGNORE INTO `swef_config_router` (`router_Context_LIKE`, `router_Endpoint_Preg_Match`, `router_Usergroup_Preg_Match`) VALUES
+('www-%',   '<^cry-stall-my-tea$>', '<^(public|anon)$>');
+
+
+
+-- CRY-STALL-MY-TEA TEMPLATE
+
+INSERT IGNORE INTO `swef_config_template` (`template_Priority`, `template_Context_LIKE`, `template_Endpoint_Preg_Match`, `template_Needs_Script`, `template_Content_Type`, `template_Template_Backreferenced`) VALUES
+(0, 'www-%',    '<^cry-stall-my-tea$>',   1,  'text/html; charset=utf-8', 'html/cry-stall-my-tea.html');
+
 
 
 -- CRY-STALL-MY-TEA DATA --
