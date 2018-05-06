@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cry Stall My Tea!</title>
+    <style>
+#quote-of-the-session {
+    position: fixed;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 84vw;
+    height: 84vh;
+    background-color: black;
+    color: white;
+    padding: 8vw;
+}
+#quote-of-the-session-close {
+    position: fixed;
+    top: -4vh;
+    right: 2vw;
+    cursor: pointer;
+    color: #440000;
+}
+#quote-of-the-session-quote {
+    display: block;
+    margin: 0em 0em 0.6em 0em;
+}
+#quote-of-the-session-content {
+    margin: 0em;
+    vertical-align: middle;
+}
+.fade-in {
+    animation: intro 15.0s forwards;
+}
+@keyframes intro {
+    0% {
+        color: transparent;
+        background-color: transparent;
+        visibility: hidden;
+    }
+    16%   { 
+        color: white;
+        background-color: black;
+        visibility: visible;
+    }
+    50%   { 
+        color: white;
+        background-color: black;
+        visibility: visible;
+    }
+    100% {
+        color: transparent;
+        background-color: transparent;
+        visibility: hidden;
+    }
+}
+.fade-out {
+    animation: outro 2.0s forwards;
+}
+@keyframes outro {
+    0% {
+        color: white;
+        background-color: black;
+        visibility: visible;
+    }
+    100% { 
+        color: transparent;
+        background-color: transparent;
+        visibility: hidden;
+    }
+}
+    </style>
+  </head>
+  <body>
+
+    <h1>Example page with Cry Stall My Tea!</h1>
+
+    <script>
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState!=4 || this.status!=200) {
+        return;
+    }
+    quote = document.createElement ('div');
+    quote.setAttribute ('id','quote-of-the-session');
+    quote.innerHTML = xhttp.responseText;
+    document.body.appendChild (quote);
+    quote.classList.add ('fade-in');
+};
+xhttp.open("GET","/cry-stall-my-tea",true);
+xhttp.send();
+    </script>
+
+  </body>
+</html>

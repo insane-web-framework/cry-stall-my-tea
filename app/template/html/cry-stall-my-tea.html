@@ -1,40 +1,14 @@
-<style>
-quote.quote {
-    display: block;
-    margin: 0em 0em 0.6em 0em;
+<?php
+function crystallmytea_markup ($q) {
+    $q = str_replace ("\n",'<br/>',$q);
+    $q = str_replace ('[','<em>[',$q);
+    $q = str_replace (']','</em>]',$q);
+    return $q;
 }
-div.quote {
-    margin: 0em;
-    vertical-align: middle;
-}
-h1.close {
-    position: fixed;
-    top: -4vh;
-    right: 2vw;
-    cursor: pointer;
-    color: #440000;
-}
-div.fade-out {
-    animation: fade 3.0s forwards;
-}
-@keyframes fade {
-    from {
-        color: white;
-        background-color: black;
-        visibility: visible;
-    }
-    to   { 
-        color: transparent;
-        background-color: transparent;
-        display: none;
-        visibility: hidden;
-    }
-}
-</style>
-<h1 class="close" onclick="this.parentElement.classList.add('fade-out')">&#215;</h1>
-<div class="quote">
-  <quote class="quote"><?php echo htmlspecialchars ($this->crystallmyteaQuote[crystallmytea_col_quotation]); ?></quote>
-  <cite><?php echo htmlspecialchars ($this->crystallmyteaQuote[crystallmytea_col_author]); ?></cite>
-  <time datetime="<?php echo htmlspecialchars ($this->crystallmyteaQuote[crystallmytea_col_dated]); ?>"><?php echo htmlspecialchars ($this->crystallmyteaQuote[crystallmytea_col_dated]); ?></time>
+?>
+<h1 id="quote-of-the-session-close" onclick="this.parentElement.classList.add('fade-out')">&#215;</h1>
+<div id="quote-of-the-session-content">
+  <quote id="quote-of-the-session-quote"><?php echo crystallmytea_markup (htmlspecialchars($this->crystallmyteaQuote[crystallmytea_col_quotation])); ?></quote>
+  <cite id="quote-of-the-session-citation"><?php echo htmlspecialchars ($this->crystallmyteaQuote[crystallmytea_col_author]); ?></cite>
+  <time id="quote-of-the-session-year" datetime="<?php echo htmlspecialchars ($this->crystallmyteaQuote[crystallmytea_col_dated]); ?>"><?php echo htmlspecialchars ($this->crystallmyteaQuote[crystallmytea_col_dated]); ?></time>
 </div>
-
