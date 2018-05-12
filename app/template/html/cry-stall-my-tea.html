@@ -10,5 +10,5 @@ function crystallmytea_markup ($q) {
 <div id="quote-of-the-session-content">
   <quote id="quote-of-the-session-quote"><?php echo crystallmytea_markup (htmlspecialchars($this->crystallmyteaQuote[crystallmytea_col_quotation])); ?></quote>
   <cite id="quote-of-the-session-citation"><?php echo htmlspecialchars ($this->crystallmyteaQuote[crystallmytea_col_author]); ?></cite>
-  <time id="quote-of-the-session-year" datetime="<?php echo htmlspecialchars ($this->crystallmyteaQuote[crystallmytea_col_dated]); ?>"><?php echo htmlspecialchars ($this->crystallmyteaQuote[crystallmytea_col_dated]); ?></time>
+  <time id="quote-of-the-session-year" datetime="<?php echo htmlspecialchars ($this->crystallmyteaQuote[crystallmytea_col_dated]); ?>"><span class="quote-of-the-session-circa"><?php if ($this->crystallmyteaQuote[crystallmytea_col_circa]): ?>c.<?php else: ?>&nbsp;<?php endif; ?></span><?php echo htmlspecialchars ($this->crystallmyteaQuote[crystallmytea_col_dated]); ?></time>
 </div>

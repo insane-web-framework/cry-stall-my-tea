@@ -9,6 +9,7 @@ BEGIN
   SELECT `quote_UUID` AS `quote_uuid`
         ,`quote_Quotation` AS `quotation`
         ,`quote_Author` AS `author`
+        ,`quote_Circa` AS `circa`
         ,`quote_Dated` AS `dated`
   FROM `crystallmytea_quote`
   ORDER BY RAND()
@@ -53,10 +54,10 @@ CREATE TABLE IF NOT EXISTS `crystallmytea_quote` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT IGNORE INTO `crystallmytea_quote` (`quote_UUID`, `quote_Author`, `quote_Quotation`, `quote_Dated`) VALUES
-('83ca77bd-505d-11e8-8603-001f16148bc1',    'David Hume',   'No testimony is sufficient to establish a miracle, unless the testimony be of such a kind, that its falsehood would be more miraculous than the fact which it endeavors to establish.',    ''),
-('83d4e951-505d-11e8-8603-001f16148bc1',    'Yes, Prime Minister, Antony Jay and Jonathan Lynn',    'Bernard: Well I\'m afraid he\'s at an even greater disadvantage in understanding economics: he\'s an economist.',  ''),
-('83e09e51-505d-11e8-8603-001f16148bc1',    'Frans de Waal',    'Economists are being indoctrinated into a cardboard version of human nature, which they hold true to such a degree that their own behavior has begun to resemble it. Psychological tests have shown that economics majors are more egoistic than the average college student. Exposure in class after class to the capitalist self-interest model apparently kills off whatever prosocial tendencies these students have to begin with. They give up trusting others, and conversely others give up trusting them.',   ''),
-('83e76df4-505d-11e8-8603-001f16148bc1',    'Joan Robinson',    'The purpose of studying economics is not to acquire a set of ready-made answers to economic questions, but to learn how to avoid being deceived by economists.',   ''),
+('83ca77bd-505d-11e8-8603-001f16148bc1',    'David Hume',   'No testimony is sufficient to establish a miracle, unless the testimony be of such a kind, that its falsehood would be more miraculous than the fact which it endeavors to establish.',    '1739'),
+('83d4e951-505d-11e8-8603-001f16148bc1',    'Yes, Prime Minister, Antony Jay and Jonathan Lynn',    'Bernard: Well I\'m afraid he\'s at an even greater disadvantage in understanding economics: he\'s an economist.',  '1988'),
+('83e09e51-505d-11e8-8603-001f16148bc1',    'Frans de Waal',    'Economists are being indoctrinated into a cardboard version of human nature, which they hold true to such a degree that their own behavior has begun to resemble it. Psychological tests have shown that economics majors are more egoistic than the average college student. Exposure in class after class to the capitalist self-interest model apparently kills off whatever prosocial tendencies these students have to begin with. They give up trusting others, and conversely others give up trusting them.',   '2005'),
+('83e76df4-505d-11e8-8603-001f16148bc1',    'Joan Robinson',    'The purpose of studying economics is not to acquire a set of ready-made answers to economic questions, but to learn how to avoid being deceived by economists.',   '1955'),
 ('83ee40d9-505d-11e8-8603-001f16148bc1',    'Ronald Coase', 'If economists wished to study the horse, they wouldn\'t go and look at horses. They\'d sit in their studies and say to themselves, \"What would I do if I were a horse?\"',    ''),
 ('83f8750d-505d-11e8-8603-001f16148bc1',    'Kenneth Boulding', 'Anyone who believes exponential growth can go on forever in a finite world is either a madman or an economist.',   ''),
 ('83ff458c-505d-11e8-8603-001f16148bc1',    'Kenneth Boulding', 'Private property is a means, and neither its abolition nor its unrestricted right should be an end in itself.',    ''),
@@ -93,5 +94,5 @@ INSERT IGNORE INTO `crystallmytea_quote` (`quote_UUID`, `quote_Author`, `quote_Q
 ('84e20085-505d-11e8-8603-001f16148bc1',    'Lewis Carroll',    'One of the secrets of life is that all that is really worth the doing is what we do for others.',  ''),
 ('84e8d49f-505d-11e8-8603-001f16148bc1',    'Lewis Carroll',    'She generally gave herself very good advice, (though she very seldom followed it).',   ''),
 ('84efa9c0-505d-11e8-8603-001f16148bc1',    'Lewis Carroll',    'If you want to inspire confidence, give plenty of statistics - it does not matter that they should be accurate, or even intelligible, so long as there is enough of them.',    ''),
-('84f676ab-505d-11e8-8603-001f16148bc1',    'Lewis Carroll',    'Imagination is the only weapon in the war against reality.',   '');
-
+('84f676ab-505d-11e8-8603-001f16148bc1',    'Lewis Carroll',    'Imagination is the only weapon in the war against reality.',   ''),
+('84f676ab-505d-11e8-8603-001f16148bc1',    'Helen Keller',    'Until the great mass of the people shall be filled with the sense of responsibility for each other\'s welfare, social justice can never be attained.',   '1912');
