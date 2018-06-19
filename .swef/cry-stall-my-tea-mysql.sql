@@ -12,12 +12,10 @@ BEGIN
         ,`quote_Circa` AS `circa`
         ,`quote_Dated` AS `dated`
   FROM `crystallmytea_quote`
-  ORDER BY RAND()
-  LIMIT 0,1;
+  WHERE RAND()<(SELECT ((1/COUNT(*))*10) FROM `crystallmytea_quote`) ORDER BY RAND() LIMIT 0,1;
 END$$
 
 DELIMITER ;
-
 
 
 -- CRY-STALL-MY-TEA ENDPOINT --
