@@ -95,4 +95,6 @@ INSERT IGNORE INTO `crystallmytea_quote` (`quote_UUID`, `quote_Author`, `quote_Q
 ('84e8d49f-505d-11e8-8603-001f16148bc1',    'Lewis Carroll',    'She generally gave herself very good advice, (though she very seldom followed it).',   ''),
 ('84efa9c0-505d-11e8-8603-001f16148bc1',    'Lewis Carroll',    'If you want to inspire confidence, give plenty of statistics - it does not matter that they should be accurate, or even intelligible, so long as there is enough of them.',    ''),
 ('84f676ab-505d-11e8-8603-001f16148bc1',    'Lewis Carroll',    'Imagination is the only weapon in the war against reality.',   ''),
-('84f676ab-505d-11e8-8603-001f16148bc1',    'Helen Keller',    'Until the great mass of the people shall be filled with the sense of responsibility for each other\'s welfare, social justice can never be attained.',   '1912');
+('84f676ab-505d-11e8-8603-001f16148bc1',    'Helen Keller',    'Until the great mass of the people shall be filled with the sense of responsibility for each other\'s welfare, social justice can never be attained.',   '1912'),
+('e3b79cb3-592f-11e8-b1d5-001f16148bc1',  'Ellen Barry',  'The tabloids and the monarchy are two interdependent pillars of conservative England and neither of them can really exist without the other.',  0,  '2018'),
+('2c5e7505-5930-11e8-b1d5-001f16148bc1',  'Mark Page',  'Royal weddings are festivities organised by the morally vacuous with the purpose of distracting the intellectually vacuous.', 0,  '2018');
